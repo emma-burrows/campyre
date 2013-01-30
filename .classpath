@@ -4,5 +4,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Dev/eclipse/configuration/org.eclipse.osgi/bundles/479/1/.cp/libs/httpcore-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Dev/eclipse/plugins/com.oxygenxml.editor_14.1.0.v2012111217/lib/json.jar"/>
+	<classpathentry kind="lib" path="C:/Dev/eclipse/configuration/org.eclipse.osgi/bundles/479/1/.cp/libs/httpclient-4.1.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
