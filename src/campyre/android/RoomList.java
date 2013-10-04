@@ -36,7 +36,8 @@ public class RoomList extends ListActivity {
 	private boolean forResult = false;
 	private String shareText = null;
 	
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_titled);
@@ -165,7 +166,8 @@ public class RoomList extends ListActivity {
         return result;
     }
     
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch(item.getItemId()) { 
     	case MENU_CLEAR:

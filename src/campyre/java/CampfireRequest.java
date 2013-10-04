@@ -126,6 +126,7 @@ public class CampfireRequest {
 	}
 	
 	// lets you override the format per-request (used only for file uploading, which has to be .xml)
+	@SuppressWarnings("deprecation")
 	public String url(String path, String format, Map<String,String> parameters) {
 		StringBuilder url = new StringBuilder("https://")
 			.append(domain())

@@ -64,7 +64,7 @@ public class Message {
 	}
 
 	public Message(JSONObject json) throws JSONException, DateParseException {
-		String body = denull(json.getString("body"));
+		String body = denull(json.getString("body").replaceAll(":.+:", "<img width=\"20\" height=\"20\" title=\"\1\" src=\"/images/emoji/cookie.png?1380906477\"/>"));
 
 		this.body = body;
 		this.type = Type.typeFor(json.getString("type"), body);
@@ -147,5 +147,18 @@ public class Message {
 		Pattern pattern = Pattern.compile("^(http[^\\s]+(?:jpe?g|gif|png))(\\?[^\\s]*)?$");
 		Matcher matcher = pattern.matcher(body);
 		return matcher.matches();
+	}
+	
+	public String replaceEmoji(String body) {
+		if (!loadImages) {
+			return body;
+		}
+		Pattern pattern = Pattern.compile(":.+?:");
+		Matcher matcher = pattern.matcher(body);
+		String finalBody = "";
+		if(matcher.matches()) {
+			finalBody = body.replaceAll(":.+:", "<img width=\"20\" height=\"20\" title=\"\1\" src=\"/images/emoji/cookie.png?1380906477\"/>" );
+		}
+		return finalBody;
 	}
 }

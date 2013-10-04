@@ -26,6 +26,7 @@ public class TranscriptView extends ListActivity implements RoomContext, LoadIma
 	private HashMap<String,LoadImageTask> loadImageTasks = new HashMap<String,LoadImageTask>();
 	private HashMap<String,BitmapDrawable> cachedImages = new HashMap<String,BitmapDrawable>();
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

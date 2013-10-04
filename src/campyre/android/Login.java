@@ -26,6 +26,7 @@ public class Login extends Activity {
 
 	private LoginTask loginTask;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -93,7 +94,8 @@ public class Login extends Activity {
         return result;
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch(item.getItemId()) {
     	case MENU_ABOUT:

@@ -24,6 +24,7 @@ public class ImageDetail extends Activity implements LoadsImage {
 	LoadImageTask loadImageTask;
 	BitmapDrawable image;
 	
+	@SuppressWarnings("deprecation")
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.image);

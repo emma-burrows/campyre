@@ -18,6 +18,7 @@ public class Settings extends PreferenceActivity {
 	public static final String LOAD_IMAGES_KEY = "load_images";
 	public static final boolean LOAD_IMAGES_DEFAULT = true;
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class Settings extends PreferenceActivity {
 		setupControls();
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void setupControls() {
 		Utils.setTitle(this, R.string.menu_settings);
 		updateNumberMessagesSummary(Utils.getStringPreference(this, NUMBER_MESSAGES_KEY, NUMBER_MESSAGES_DEFAULT + ""));
@@ -41,6 +43,7 @@ public class Settings extends PreferenceActivity {
 		});
 	}
 	
+	@SuppressWarnings("deprecation")
 	private void updateNumberMessagesSummary(String value) {
 		String summary = "Show " + value + " messages when in a room.";
 		findPreference(NUMBER_MESSAGES_KEY).setSummary(summary);

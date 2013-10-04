@@ -117,6 +117,8 @@ public class MessageAdapter extends ArrayAdapter<Message> {
 		case LEAVE:
 		case TOPIC:
 			holder.person = (TextView) view.findViewById(R.id.person);
+		default:
+			break;
 		}
 
 		if (type == Type.PASTE)
@@ -142,6 +144,8 @@ public class MessageAdapter extends ArrayAdapter<Message> {
 		case LEAVE:
 		case TOPIC:
 			holder.person.setText(message.person);
+		default:
+			break;
 		}
 
 		// hide the person if the previous message in the adapter is a text message of the same person
@@ -158,9 +162,13 @@ public class MessageAdapter extends ArrayAdapter<Message> {
 					case PASTE:
 						if (previous.user_id.equals(message.user_id))
 							holder.person.setVisibility(View.INVISIBLE);
+					default:
+						break;
 					}
 				}
 			}
+		default:
+			break;
 		}
 
 		// format the body text
@@ -182,6 +190,8 @@ public class MessageAdapter extends ArrayAdapter<Message> {
 		case TRANSIT:
 		case TOPIC:
 			holder.body.setText(message.body.trim());
+		default:
+			break;
 		}
 
 		// change background color of text view if the owner is the logged in user (like the web client)
@@ -193,6 +203,8 @@ public class MessageAdapter extends ArrayAdapter<Message> {
 				view.setBackgroundColor(resources.getColor(R.color.message_text_background_own));
 			else
 				view.setBackgroundColor(resources.getColor(R.color.message_text_background));
+		default:
+			break;
 		}
 
 		if (message.type == Type.PASTE) {
