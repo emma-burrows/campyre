@@ -10,12 +10,13 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 import campyre.java.Room;
 
+@SuppressWarnings("deprecation")
 public class RoomTabs extends TabActivity {
 	public String roomId, roomName;
 	public Room room;
 	
 	public String shareText;
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

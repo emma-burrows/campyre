@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Window;
-
 import campyre.java.Campfire;
 import campyre.java.CampfireException;
 import campyre.java.Room;
@@ -23,6 +22,7 @@ public class ShareImage extends Activity {
 	private UploadTask uploadTask;
 	private ProgressDialog dialog = null;
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

@@ -24,6 +24,7 @@ import campyre.java.Message;
 import campyre.java.Message.Type;
 import campyre.java.Room;
 import campyre.java.User;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -66,6 +67,7 @@ public class RoomView extends ListActivity implements RoomContext, LoadsImage {
 	private EditText body;
 	private Button speak;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -214,7 +216,7 @@ public class RoomView extends ListActivity implements RoomContext, LoadsImage {
 
 	private void onSpeak(Message message, String transitId) {
 		transitMessages.remove(transitId);
-		messages.add(message);
+		//messages.add(message);
 		updateMessages();
 	}
 
